@@ -1,0 +1,53 @@
+
+class AppStrings{
+  static String appname = "MEDICARE App";
+  static String bestdocapp = "Best Doctor\n Appointment App";
+  static String welcome = "Welcome";
+  static String welcomeback = "Welcome Back";
+  static String weareexited = "We are exited to see you again";
+  static String signupnow = "Sign Up Now to explore all the features our app has to offer!";
+  static String email = "Email";
+  static String emailHint = "Enter your email...";
+  static String password = "Password";
+  static String passwordHint = "Enter your password here...";
+  static String fullname = "Full Name";
+  static String fullnameHint = "Enter your name here..";
+  static String confirmPassword = "Confirm Password";
+  static String login = "Login";
+  static String signup = "SignUp";
+  static String forgetPassword = "Forget Password?";
+  static String alreadyHaveAccount = "Account have an account?";
+  static String dontHaveAccount = "Don't have an account?";
+  static String search = "Search Doctor";
+  static String body = "Body";
+  static String ear = "Ear";
+  static String liver = "Liver";
+  static String eye = "Eye";
+  static String heart = "Heart";
+  static String kidney = "Kidney";
+  static String lungs = "Lungs";
+  static String stomach = "Stomach";
+  static String tooth = "Tooth";
+  static String doctorName1 = "Dr. John Doe";
+  static String doctorName2 = "Dr. Jane Doe";
+  static String doctorName3 = "Dr. Richard Roe";
+  static String doctorName4 = "Dr. Janet Roe";
+  static String doctorName5 = "Dr. John Smith";
+  static String doctorName6 = "Dr. Jane Smith";
+  static String doctorName7 = "Dr. Richard Smith";
+  static String doctorName8 = "Dr. Janet Smith";
+  static String doctorName9 = "Dr. John Doe";
+  static String labtest1 = "Blood Test";
+  static String labtest2 = "Urine Test";
+  static String labtest3 = "X-Ray";
+  static String labtest4 = "MRI";
+  static String labtest5 = "CT Scan";
+  static String labtest6 = "ECG";
+  static String labtest7 = "EEG";
+  static String labtest8 = "Ultrasound";
+  static String labtest9 = "Endoscopy";
+  static String category = "Category";
+  static String doctor = "Doctor Login";
+  static String settings = "Settings";
+}
+
