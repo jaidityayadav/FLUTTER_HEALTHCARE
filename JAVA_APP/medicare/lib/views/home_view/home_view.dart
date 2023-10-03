@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:medicare/consts/consts.dart';
 import 'package:medicare/consts/lists.dart';
 import 'package:medicare/res/components/custom_textfield.dart';
@@ -23,7 +19,7 @@ class HomeView extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(15),
+            padding: const EdgeInsets.all(15),
             height : 100,
             color: AppColors.blueColor,
             child: Row(
@@ -60,10 +56,9 @@ class HomeView extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12),
                           ),
                           padding: const EdgeInsets.all(12),
-                          margin: EdgeInsets.only(right: 8),
+                          margin: const EdgeInsets.only(right: 8),
                           child: Column(
                             children: [
-                              5.heightBox,
                               Image.asset(
                                 iconsList[index],
                                 width: 30,

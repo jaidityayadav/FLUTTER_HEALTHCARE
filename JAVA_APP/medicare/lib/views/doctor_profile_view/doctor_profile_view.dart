@@ -1,10 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:medicare/consts/colors.dart';
+import 'package:medicare/bookin_view/booking_view.dart';
 import 'package:medicare/consts/consts.dart';
-import 'package:medicare/consts/fonts.dart';
-import 'package:medicare/consts/strings.dart';
 import 'package:medicare/res/components/custom_button.dart';
 
 
@@ -35,7 +31,7 @@ class DoctorProfileView extends StatelessWidget {
         
                  child: Row(
                    children: [
-                    CircleAvatar(child: Image.asset(AppAssets.icSignup),radius: 40,),
+                    CircleAvatar(radius: 40,child: Image.asset(AppAssets.icSignup),),
                     10.widthBox,
                      Expanded(
                        child: Column(
@@ -62,7 +58,7 @@ class DoctorProfileView extends StatelessWidget {
         
               10.heightBox,
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12),
@@ -77,7 +73,7 @@ class DoctorProfileView extends StatelessWidget {
                       ),
                       trailing: Container(
                         width: 50,
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           color: AppColors.yellowcolor,
                           borderRadius: BorderRadius.circular(12),
@@ -130,6 +126,7 @@ class DoctorProfileView extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: CustomButton(buttonText: "Book an Appointment",
         onTap: () {
+          Get.to(()=>const BookingView());
           },),
       ),
     );

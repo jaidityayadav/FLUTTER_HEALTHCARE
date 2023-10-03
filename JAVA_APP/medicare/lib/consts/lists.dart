@@ -91,3 +91,4 @@ var settingsIconsList = [
   Icons.info,
   Icons.logout,
 ];
+

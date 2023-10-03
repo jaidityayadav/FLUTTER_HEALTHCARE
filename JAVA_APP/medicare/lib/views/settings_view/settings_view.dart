@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
 import 'package:medicare/consts/consts.dart';
 import 'package:medicare/consts/lists.dart';
 
@@ -15,7 +15,7 @@ class SettingsView extends StatelessWidget {
       body: Column(
         children: [
           ListTile(
-            leading: CircleAvatar(child: Icon(Icons.person_2_outlined)),
+            leading: const CircleAvatar(child: Icon(Icons.person_2_outlined)),
             title: AppStyles.bold(title: "krish",),
             subtitle: AppStyles.normal(title: "temp@mail.com"),
 
@@ -35,3 +35,4 @@ class SettingsView extends StatelessWidget {
     );
   }
 }
+

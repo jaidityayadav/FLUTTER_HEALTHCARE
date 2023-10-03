@@ -1,10 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:medicare/consts/colors.dart';
 import 'package:medicare/consts/consts.dart';
-import 'package:medicare/consts/fonts.dart';
-import 'package:medicare/consts/images.dart';
 import 'package:medicare/consts/lists.dart';
 import 'package:medicare/views/labtest_detail_view/labtest_detail_view.dart';
 
@@ -54,7 +49,7 @@ class LabTest extends StatelessWidget {
                                     ),
                                   ),
                                 5.heightBox,
-                                AppStyles.normal(title: "${labList[index]}"),
+                                AppStyles.normal(title: labList[index]),
                                 5.heightBox,
                                 
                               ],

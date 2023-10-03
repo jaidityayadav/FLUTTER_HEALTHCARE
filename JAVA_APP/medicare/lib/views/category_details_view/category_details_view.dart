@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:medicare/consts/consts.dart';
-import 'package:medicare/consts/lists.dart';
 import 'package:medicare/views/doctor_profile_view/doctor_profile_view.dart';
 
 class CategoryDetailsView extends StatelessWidget {

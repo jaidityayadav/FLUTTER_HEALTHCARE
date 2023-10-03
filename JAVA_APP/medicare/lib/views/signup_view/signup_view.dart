@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/route_manager.dart';
 import 'package:medicare/consts/images.dart';
 import 'package:medicare/consts/strings.dart';
@@ -15,7 +14,7 @@ class SignupView extends StatelessWidget {
     return Scaffold(
       body: Container(
         margin: const EdgeInsets.only(top:40),
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Column(
           children: [
             Column(

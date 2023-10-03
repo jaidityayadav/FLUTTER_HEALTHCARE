@@ -20,5 +20,5 @@ class AppAssets{
   static String icDoctor8 = "assets/images/doctor_8.jpg";
   static String icDoctor9 = "assets/images/doctor_9.jpg";
   static String icInjection = "assets/icons/inject.png";
-  
+  static String success = "assets/success.json";
 }

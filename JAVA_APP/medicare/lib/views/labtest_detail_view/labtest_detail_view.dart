@@ -1,9 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:medicare/consts/colors.dart';
+import 'package:get/get.dart';
+import 'package:medicare/bookin_view/booking_view.dart';
 import 'package:medicare/consts/consts.dart';
-import 'package:medicare/consts/fonts.dart';
-import 'package:medicare/consts/strings.dart';
 import 'package:medicare/res/components/custom_button.dart';
+
 
 class LabTestDetailView extends StatelessWidget {
   const LabTestDetailView({super.key});
@@ -32,7 +31,7 @@ class LabTestDetailView extends StatelessWidget {
         
                  child: Row(
                    children: [
-                    CircleAvatar(child: Image.asset(AppAssets.icInjection),radius: 40,),
+                    CircleAvatar(radius: 40,child: Image.asset(AppAssets.icInjection),),
                     10.widthBox,
                      Expanded(
                        child: Column(
@@ -59,7 +58,7 @@ class LabTestDetailView extends StatelessWidget {
         
               10.heightBox,
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12),
@@ -95,7 +94,10 @@ class LabTestDetailView extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: CustomButton(buttonText: "Book an Appointment for Lab Test",onTap : () {}),
+        child: CustomButton(buttonText: "Book an Appointment for Lab Test",
+        onTap : () {
+          Get.to(()=>const BookingView());
+        }),
       ),
     );
   }

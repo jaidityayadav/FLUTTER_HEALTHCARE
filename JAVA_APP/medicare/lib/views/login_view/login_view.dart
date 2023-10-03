@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/route_manager.dart';
 import 'package:medicare/consts/images.dart';
 import 'package:medicare/consts/strings.dart';
 import 'package:medicare/res/components/custom_button.dart';
 import 'package:medicare/res/components/custom_textfield.dart';
 import 'package:medicare/views/home_view/home.dart';
-import 'package:medicare/views/home_view/home_view.dart';
 import 'package:medicare/views/signup_view/signup_view.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -18,7 +16,7 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       body: Container(
         margin: const EdgeInsets.only(top:40),
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Column(
           children: [
             Column(

@@ -4,3 +4,4 @@ export './images.dart';
 export './fonts.dart';
 export 'package:flutter/material.dart';
 export 'package:velocity_x/velocity_x.dart';
+export 'package:table_calendar/table_calendar.dart';
