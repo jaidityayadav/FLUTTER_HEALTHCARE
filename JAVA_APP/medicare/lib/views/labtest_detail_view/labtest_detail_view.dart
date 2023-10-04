@@ -3,7 +3,6 @@ import 'package:medicare/bookin_view/booking_view.dart';
 import 'package:medicare/consts/consts.dart';
 import 'package:medicare/res/components/custom_button.dart';
 
-
 class LabTestDetailView extends StatelessWidget {
   const LabTestDetailView({super.key});
 

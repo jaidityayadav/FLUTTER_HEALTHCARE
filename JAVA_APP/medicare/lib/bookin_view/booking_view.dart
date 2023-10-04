@@ -106,7 +106,7 @@ class _BookingViewState extends State<BookingView> {
                   width:double.infinity,
                   title: 'Book an Appointment',
                   onPressed: () {
-                     Get.to(()=>const AppointmentBooked());
+                    Get.to(()=>const AppointmentBooked());
                   },
                   disable: _timeSelected && _dateSelected ? false : true,
                 ),
