@@ -67,7 +67,7 @@ var labList = [
 ];
 
 var specialist = [
-  "10",
+  "9",
   "5",
   "8",
   "13",

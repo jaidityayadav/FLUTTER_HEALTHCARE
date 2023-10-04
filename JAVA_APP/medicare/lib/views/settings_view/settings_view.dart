@@ -1,6 +1,8 @@
-
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:medicare/consts/consts.dart';
 import 'package:medicare/consts/lists.dart';
+import 'package:medicare/views/login_view/login_view.dart';
 
 class SettingsView extends StatelessWidget {
   const SettingsView({super.key});
@@ -25,7 +27,9 @@ class SettingsView extends StatelessWidget {
           ListView(
             shrinkWrap: true,
             children: List.generate(settingsList.length, (index) => ListTile(
-              onTap: () {},
+              onTap: () {
+                Get.to(() => const LoginView());
+              },
               leading: Icon(settingsIconsList[index]),
               title: AppStyles.bold(title: settingsList[index],size: 16.0),
             )),

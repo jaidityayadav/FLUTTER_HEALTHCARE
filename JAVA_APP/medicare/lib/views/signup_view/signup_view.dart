@@ -4,6 +4,8 @@ import 'package:medicare/consts/images.dart';
 import 'package:medicare/consts/strings.dart';
 import 'package:medicare/res/components/custom_button.dart';
 import 'package:medicare/res/components/custom_textfield.dart';
+import 'package:medicare/views/home_view/home.dart';
+import 'package:medicare/views/login_view/login_view.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class SignupView extends StatelessWidget {
@@ -41,7 +43,9 @@ class SignupView extends StatelessWidget {
                     10.heightBox,
                     CustomTextField(hint:AppStrings.password),
                     20.heightBox,
-                    CustomButton(buttonText: AppStrings.signup,onTap: () {}),
+                    CustomButton(buttonText: AppStrings.signup,onTap: () {
+                      Get.to(()=> LoginView());
+                    }),
                     20.heightBox,
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

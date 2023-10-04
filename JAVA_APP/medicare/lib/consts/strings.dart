@@ -38,7 +38,7 @@ class AppStrings{
   static String doctorName8 = "Dr. Janet Smith";
   static String doctorName9 = "Dr. John Doe";
   static String labtest1 = "Blood Test";
-  static String labtest2 = "Urine Test";
+  static String labtest2 = "Full blood count (FBC)";
   static String labtest3 = "X-Ray";
   static String labtest4 = "MRI";
   static String labtest5 = "CT Scan";

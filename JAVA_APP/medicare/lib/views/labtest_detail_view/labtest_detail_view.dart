@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:medicare/bookin_view/booking_view.dart';
 import 'package:medicare/consts/consts.dart';
 import 'package:medicare/res/components/custom_button.dart';
+import 'package:medicare/views/arduino_view/arduino_view.dart';
 
 class LabTestDetailView extends StatelessWidget {
   const LabTestDetailView({super.key});
@@ -91,13 +92,28 @@ class LabTestDetailView extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: CustomButton(buttonText: "Book an Appointment for Lab Test",
-        onTap : () {
-          Get.to(()=>const BookingView());
-        }),
+      bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            IconButton(
+              icon: Icon(Icons.book_online_outlined),
+              onPressed: () {
+                Get.to(()=> BookingView());
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.sensors_sharp),
+              onPressed: () {
+                Get.to(()=> ArduinoView());
+              },
+            ),
+          ],
+        ),
       ),
+      
     );
   }
 }
+
