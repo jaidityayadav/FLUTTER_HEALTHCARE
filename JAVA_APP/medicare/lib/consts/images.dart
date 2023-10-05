@@ -21,4 +21,5 @@ class AppAssets{
   static String icDoctor9 = "assets/images/doctor_9.jpg";
   static String icInjection = "assets/icons/inject.png";
   static String success = "assets/success.json";
+  static String arduino = "assets/videos/1.mp4";
 }

@@ -2,83 +2,76 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:medicare/bookin_view/booking_view.dart';
+import 'package:medicare/consts/consts.dart';
 import 'package:medicare/res/components/custom_button.dart';
 import 'package:medicare/views/arduino_view/arduino_value.dart';
+import 'package:video_player/video_player.dart';
 
 class ArduinoView extends StatefulWidget {
+  ArduinoView() : super();
+ 
+  final String title = "Video Demo";
+ 
   @override
-  _ArduinoViewState createState() => _ArduinoViewState();
+  ArduinoViewState createState() => ArduinoViewState();
 }
-
-class _ArduinoViewState extends State<ArduinoView> {
-  final List<String> imagePaths = [
-    'assets/body.png',
-    'assets/ear.png',
-    'assets/eye.png',
-    'assets/heart.png',
-    'assets/kidney.png',
-    'assets/liver.png',
-    'assets/lungs.png',
-    'assets/stomach.png',
-  ];
-
-  late String selectedImagePath;
-
-  int randomNumber = 0;
-
-  @override
-  void initState1() {
-    super.initState();
-    generateRandomNumber();
-  }
-
-  void generateRandomNumber() {
-    final random = Random();
-    setState(() {
-      // Generate a random number between 70 and 90 (inclusive)
-      randomNumber = random.nextInt(21) + 70;
-    });
-  }
-
-
-
-
-
+ 
+class ArduinoViewState extends State<ArduinoView> {
+  //
+  late VideoPlayerController _controller;
+  late Future<void> _initializeVideoPlayerFuture;
+ 
   @override
   void initState() {
+
+    _controller = VideoPlayerController.asset("videos/1.mp4");
+    _initializeVideoPlayerFuture = _controller.initialize();
+    _controller.setLooping(true);
+    _controller.setVolume(1.0);
     super.initState();
-    // Select a random image path when the screen is initialized
-    selectRandomImage();
   }
-
-  void selectRandomImage() {
-    final random = Random();
-    final randomIndex = random.nextInt(imagePaths.length);
-    setState(() {
-      selectedImagePath = imagePaths[randomIndex];
-    });
+ 
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
-
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Arduino graph Viewer'),
+        title: Text("Arduino Graph"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            if (selectedImagePath != null)
-              Image.asset(
-                selectedImagePath,
-                fit: BoxFit.cover,
-              )
-            
-          ],
-        ),
+      body: FutureBuilder(
+        future: _initializeVideoPlayerFuture,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            return Center(
+              child: AspectRatio(
+                aspectRatio: _controller.value.aspectRatio,
+                child: VideoPlayer(_controller),
+              ),
+            );
+          } else {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            if (_controller.value.isPlaying) {
+              _controller.pause();
+            } else {
+              _controller.play();
+            }
+          });
+        },
+        child:
+            Icon(_controller.value.isPlaying ? Icons.pause : Icons.play_arrow),
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -87,7 +80,12 @@ class _ArduinoViewState extends State<ArduinoView> {
           Get.to(()=> ArduinoValue());
           },),
       ),
-
     );
   }
 }
+
+
+
+// import 'package:flutter/material.dart';
+// import 'package:video_player/video_player.dart';
+ 
