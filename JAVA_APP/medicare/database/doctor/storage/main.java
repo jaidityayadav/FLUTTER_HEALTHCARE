@@ -31,10 +31,10 @@ public class Main {
 
         // Adding email and password pairs to the ArrayList
         emailPasswordList=(new EmailAndPassword("temp@mail.com", "12345"));
-        
+
 
         // Printing the ArrayList
-        
+
     }
 }
 
@@ -42,7 +42,7 @@ public class Main {
 public class Main {
   public static void main(String[] args) throws Exception {
     // Load and register the JDBC driver
-    Class.forName("com.mysql.cj.jdbc.Driver");
+     Class.forName("com.mysql.cj.jdbc.Driver");
 
     // Create a Connection object
     Connection con = DriverManager.getConnection("localhost/phpmyadmin/doctor", "root", "password");

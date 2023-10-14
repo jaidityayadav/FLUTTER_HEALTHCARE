@@ -91,7 +91,6 @@ class HomeView extends StatelessWidget {
                           Get.to(() => const DoctorProfileView());
                         },
                         child: Container(
-                          
                           clipBehavior: Clip.hardEdge,
                           decoration: BoxDecoration(
                             color: AppColors.bgDarkColor,
@@ -139,7 +138,6 @@ class HomeView extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: List.generate(4, (index) => Container(
-                      
                       decoration: BoxDecoration(
                         color: Colors.deepOrange,
                         borderRadius: BorderRadius.circular(12),
@@ -155,11 +153,6 @@ class HomeView extends StatelessWidget {
                     )),
                   ),
                 )
-
-
-
-
-
               ],
             ),
           ),
