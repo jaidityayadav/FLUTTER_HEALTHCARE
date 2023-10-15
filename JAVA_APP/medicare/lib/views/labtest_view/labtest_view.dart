@@ -3,6 +3,8 @@ import 'package:medicare/consts/consts.dart';
 import 'package:medicare/consts/lists.dart';
 import 'package:medicare/views/labtest_detail_view/labtest_detail_view.dart';
 
+
+
 class LabTest extends StatelessWidget {
   const LabTest({super.key});
 
@@ -27,7 +29,6 @@ class LabTest extends StatelessWidget {
               Get.to(()=>const LabTestDetailView());
             },
             child: Container(
-                            
                             clipBehavior: Clip.hardEdge,
                             decoration: BoxDecoration(
                               color: AppColors.bgDarkColor,
@@ -51,7 +52,7 @@ class LabTest extends StatelessWidget {
                                 5.heightBox,
                                 AppStyles.normal(title: labList[index]),
                                 5.heightBox,
-                                
+
                               ],
                             ),
                           ),
